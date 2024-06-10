@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convertir a binario</title>
+  <script>
+    do {
+      var numero = prompt("Ingrese un numero para hacerlo binario: ");
+      var numeroOri = numero;
+      var binario = "";
+      var proceso = "    2\n    |\n";
+      while (numero > 0) {
+        var residuo = numero % 2;
+        binario = residuo + binario;
+        proceso += numero + "  |    " + residuo + "\n";
+        numero = parseInt(numero / 2);
+      }
+      alert(proceso + "\n" + numeroOri + " en binario es: " + binario);
+      var respuesta = prompt("¿Desea convertir otro numero? (S/N)");
+    } while (respuesta == "S" || respuesta == "s")
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
